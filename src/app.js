@@ -15,6 +15,11 @@ const store = createStore(reducer, composeWithDevTools(
 ))
 
 class App extends Component {
+
+  onTabItemTap(e) {
+    console.log('onTabItemTap', e);
+  }
+
   config = {
     pages: [
       'pages/index/index'
@@ -24,7 +29,31 @@ class App extends Component {
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'WeChat',
       navigationBarTextStyle: 'black'
-    }
+    },
+    tabBar: {
+      backgroundColor: '#fff',
+      selectedColor: '#000',
+      list: [
+        {
+          pagePath: 'pages/index/index',
+          text: 'A',
+          color: '#94949B',
+          selectedColor: '#252525',
+        },
+        {
+          pagePath: 'pages/index/index',
+          text: 'B',
+          color: '#94949B',
+          selectedColor: '#252525',
+        },
+        {
+          pagePath: 'pages/index/index',
+          text: 'C',
+          color: '#94949B',
+          selectedColor: '#252525'
+        }
+      ],
+    },
   }
 
   componentDidMount () {}

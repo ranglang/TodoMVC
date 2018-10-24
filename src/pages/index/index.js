@@ -11,6 +11,14 @@ class Index extends Component {
     navigationBarTitleText: 'TODO List'
   }
 
+  onTabItemTap(e) {
+    console.log('onTabItemTap', e);
+  }
+
+  onPullDownRefresh(e) {
+    console.log('onPullDownRefresh', e)
+  }
+
   componentWillReceiveProps (nextProps) {
     console.log(this.props, nextProps)
   }
